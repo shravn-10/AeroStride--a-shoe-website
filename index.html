@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="A98RISKc_400x400.jpg">
+    <title>AeroStride</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+         $(document).ready(function() {
+      $('#mouse_enter').mouseenter(function() {
+        $(this).addClass('hovered');
+      }).mouseleave(function() {
+        $(this).removeClass('hovered');
+      });
+    });
+    </script>
+</head>
+
+<body>
+    
+    <header>
+        <h1>AeroStride<br></h1>
+    <nav>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="order_form.html" target="_blank">Shop</a></li>
+        <li><a href="about_page.html" target="_blank">About</a></li>
+        <li><a href="up_del.html" target="_blank">Change order</a></li>
+        <li><a href="Warr.html" target="_blank">Warranty</a></li>
+        <li><a href="return.html" target="_blank">Return</a></li>
+        </ul>
+    </nav>
+    <div ng-app="myApp" ng-controller="myCtrl"> 
+        <h1>{{theTime}}</h1>
+        <p><span id='date-time'></span>.</p>
+        </div>
+        <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope, $interval) {
+            $scope.theTime = new Date().toLocaleTimeString();
+            $interval(function () {
+            $scope.theTime = new Date().toLocaleTimeString();
+            }, 1000);
+        });
+
+        var dt = new Date().toDateString();
+        document.getElementById('date-time').innerHTML=dt;
+        </script>  
+    </header>
+
+    <section class="hero">
+        
+        <h2>Destined for Greatness</h2>
+        <a href="#jordan" class="btn1">View Collection</a>
+    </section>
+
+    <section class="products">
+        <div class="product" id="img_enter">
+            <img src="nike jordans 0.png" alt="Shoe 1" id="jordan">
+            <h3>Jordan X</h3>
+            <p>The Jordan X is a legendary basketball shoe that combines iconic design with cutting-edge performance, delivering unparalleled style and on-court excellence.</p>
+            <a href="order_form.html" class="btn" target="_blank">Buy Now</a>
+        </div>
+    
+        <div class="product" id="img_enter" >
+            <img src="messi shoes 0.png" alt="Shoe 2">
+            <h3>GOAT</h3>
+            <p>A revolutionary shoe inspired by the legendary soccer player Lionel Messi, combining unparalleled performance, agility, and style.</p>
+            <a href="order_form.html" class="btn" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="product" id="img_enter">
+            <img src="kobe bryant sho 0.png" alt="Shoe 2">
+            <h3>Black Mamba</h3>
+            <p>A fearless and dynamic shoe paying homage to the legendary Kobe Bryant, delivering unparalleled court dominance with its sleek design and lethal performance</p>
+            <a href="order_form.html" class="btn" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="product" id="img_enter">
+            <img src="ishowspeed shoe 1.png" alt="Shoe 2">
+            <h3>Sewy</h3>
+            <p> A cutting-edge shoe embodying the speed and agility of iShowSpeed, empowering athletes to outpace their limits and leave a trail of awe-inspiring performances.</p>
+            <a href="order_form.html" class="btn" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="product" id="img_enter">
+            <img src="cristiano ronal 1.png" alt="Shoe 2">
+            <h3>CR7</h3>
+            <p>An iconic shoe inspired by the electrifying skill and relentless drive of Cristiano Ronaldo, designed to enhance performance and elevate your game to new heights.</p>
+            <a href="order_form.html" class="btn" target="_blank">Buy Now</a>
+        </div>
+
+        <div class="product" id="img_enter">
+            <img src="giannis antetok 1.png" alt="Shoe 2">
+            <h3>The Greek Freak</h3>
+            <p>A dynamic shoe capturing the power and finesse of Giannis Antetokounmpo, delivering unparalleled freedom of movement and explosive performance on the court.</p>
+            <a href="order_form.html" class="btn" target="_blank">Buy Now</a>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2023 AeroStride. All rights reserved.</p>
+        <a href="admin_pages.html" target="_blank" style="color: #333;">Admin</a>
+    </footer>
+
+</body>
+</html>

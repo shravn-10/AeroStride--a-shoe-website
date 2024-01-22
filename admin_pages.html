@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+    
+        h1 {
+            text-align: center;
+            color: #333333;
+            margin-bottom: 50px;
+        }
+    
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .form-group {
+            margin-bottom: 20px;
+        }
+    
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666666;
+            font-weight: bold;
+        }
+    
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+        }
+    
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+    
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Page</h1>
+    <form action="shoe_order3.php" method="post">
+    <div class="container">
+        <div class="form-group">
+            <label for="customer-id">Customer Aadhar:</label>
+            <input type="text" id="customer-id" placeholder="Enter Customer ID" name="admin_aadhar">
+        </div>
+        <div class="form-group">
+            <button class="btn" >Search by Aadhar</button>
+        </div>
+
+        <div class="form-group">
+            <label for="shoe-name">Shoe Name:</label>
+            <input type="text" id="shoe-name" placeholder="Enter Shoe Name" name="admin_shoe">
+        </div>
+        <div class="form-group">
+            <button class="btn" >Search by Shoe</button>
+        </div>
+
+        <div class="form-group">
+            <label for="shoe-name">To search for customers with warranty:</label>
+        </div>
+        <div class="form-group">
+            <button class="btn" name="warr_butt">Search by Warranty</button>
+        </div>
+
+        <div class="form-group">
+            <label for="shoe-name">To search for customers who returned shoes:</label>
+        </div>
+        <div class="form-group">
+            <button class="btn" name="return_butt">Search by Return</button>
+        </div>
+    </div>
+
+        
+
+
+</body>
+</html>
